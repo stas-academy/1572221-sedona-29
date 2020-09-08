@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Станислав Гайворонский](https://up.htmlacademy.ru/htmlcss/29/user/1572221).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Малиновская](https://htmlacademy.ru/profile/irina-malinovskaya).
 
 ---
 
