@@ -1,0 +1,143 @@
+/* Fonts*/
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'),
+       url('../fonts/ptsans.woff2') format('woff2'), 
+       url('../fonts/ptsans.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'),
+       url('../fonts/ptsansbold.woff2') format('woff2'),
+       url('../fonts/ptsansbold.woff') format('woff');
+}
+/*Variables*/
+:root {
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+
+  
+  --basic-blue: #81B3D2;
+  --basic-grey-dark: #eeeeee;
+
+  --basic-black-light: #333333;
+  --basic-brown: #766357;
+
+  --basic-grey-rating: #666666;
+  --basic-grey-white: #F2F2F2;
+  --basic-transparency:rgba(255, 255, 255, 0.9);
+}
+
+body {
+  font-family: "PT Sans", Arial, sans-serif;
+  background-color: var(--basic-grey-white);
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  
+}
+.container {
+  width: 1200px;
+  margin: auto;
+  background-color: var(--basic-white);
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.main-navigation {
+  font-weight: bold;
+}
+.site-navigation {
+  list-style: none;
+}
+.site-navigation a{
+  color: var(--basic-black);
+}
+.reason {
+  text-align: center;
+}
+.reason-header {
+  font-size: 21px;
+  line-height: 26px;
+}
+.reason-text {
+  color: var(--basic-black-light);
+}
+.description {
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+}
+.description-text {
+  text-align: center;
+  
+}
+.description-text h2{
+  font-size: 21px;
+  line-height: 21px;
+}
+.description-text p{
+  font-size: 14px;
+  line-height: 21px;
+}
+.description-foto {
+  background-color: var(--basic-blue);
+}
+.features {
+  text-align: center;
+}
+.features-list {
+  list-style: none;
+}
+.features h3{
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+.features p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+.features-bottom {
+  background-color: var(--basic-grey-dark);
+}
+.intrst {
+  text-align: center;
+  
+}
+.intrst-header {
+  font-size: 30px;
+  line-height: 24px;
+}
+.intrst-text {
+  
+}
+.main-footer-contact {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+.main-footer-contact a{
+  color: var(--basic-black);
+}
+.main-footer-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+}
+.social {
+  background-color: var(--basic-transparency);
+}
+.social-list {
+  list-style: none;
+}
