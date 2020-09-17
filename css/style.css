@@ -31,6 +31,14 @@
   --basic-grey-rating: #666666;
   --basic-grey-white: #F2F2F2;
   --basic-transparency:rgba(255, 255, 255, 0.9);
+
+  --basic-blue-hover: #669EC0;
+  --basic-blue-active: #5496BD;
+  --basic-brown-hover: #604E43;
+  --basic-brown-active: #503E33;
+
+  --basic-transparency-active:rgba(255, 255, 255, 0.3);
+  --basic-transparency-active: rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -88,7 +96,7 @@ img {
   font-size: 14px;
   line-height: 21px;
 }
-.description-foto {
+.description-photo {
   background-color: var(--basic-blue);
 }
 .features {
@@ -111,17 +119,15 @@ img {
 .features-bottom {
   background-color: var(--basic-grey-dark);
 }
-.intrst {
+.date {
   text-align: center;
   
 }
-.intrst-header {
+.date-header {
   font-size: 30px;
   line-height: 24px;
 }
-.intrst-text {
-  
-}
+
 .main-footer-contact {
   font-size: 21px;
   line-height: 26px;
@@ -140,4 +146,58 @@ img {
 }
 .social-list {
   list-style: none;
+  text-align: center;
+}
+
+/*Страница каталога!!!*/
+
+/*Форма*/
+/*Сортировка*/
+/*Типы жилья*/
+
+.housing-hotels {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+.housing-hotels:hover {
+  color: var(--basic-blue);
+}
+.housing-hotels:active {
+  color: var(--basic-transparency-active);
+}
+
+.housing-price {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-black-light);
+}
+.housing-button {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  color: var(--basic-white);
+  border: none;
+}
+.housing-more {
+  background-color: var(--basic-blue);
+}
+.housing-more:hover {
+  background-color: var(--basic-blue-hover);
+}
+.housing-more:active {
+  background-color: var(--basic-blue-active);
+  color: var(--basic-transparency-active);
+}
+.housing-reservation {
+  background-color: var(--basic-brown);
+}
+.housing-reservation:hover {
+  background-color: var(--basic-brown-hover);
+}
+.housing-reservation:active {
+  background-color: var(--basic-brown-active);
+  color: var(--basic-transparency-active);
 }
