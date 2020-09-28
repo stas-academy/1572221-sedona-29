@@ -16,6 +16,23 @@
        url('../fonts/ptsansbold.woff2') format('woff2'),
        url('../fonts/ptsansbold.woff') format('woff');
 }
+/*@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'),
+       url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff2') format('woff2'), 
+       url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'),
+       url('../fonts/pt-sans-v11-latin_cyrillic-700.woff2') format('woff2'),
+       url('../fonts/pt-sans-v11-latin_cyrillic-700.woff') format('woff');
+}*/
 /*Variables*/
 :root {
   --basic-black: #000000;
@@ -47,58 +64,97 @@ body {
   margin: 0;
   padding: 0;
   text-transform: uppercase;
-  
 }
+
 .container {
   width: 1200px;
   margin: auto;
   background-color: var(--basic-white);
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 a {
   text-decoration: none;
 }
-img {
-  max-width: 100%;
-  height: auto;
-}
+
 .main-navigation {
   font-weight: bold;
+  position: relative;
 }
 .site-navigation {
+  display: flex;
+  justify-content: space-around;
   list-style: none;
+  padding: 15px 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 26px;
+}
+.main-header-logo {
+  position: absolute;
+  z-index: 1;
+  margin: 0 531px;
+  padding: 0;
+  width: 138px;
+  height: 70px;
 }
 .site-navigation a{
   color: var(--basic-black);
 }
-.welkom {
+
+.welkome {
   position: relative;
   background-color: var(--basic-black);
+  background-repeat: no-repeat;
+  margin-bottom: 38px;
+  background-image: url(../img/background-photo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   width: 1200px;
   height: 509px;
 }
-.welkom-text {
+.welkome-text {
   position: absolute;
   left: 371px;
-  top: 77px;
+  top: 76px;
+
 }
 .reason {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .reason-header {
   font-size: 21px;
   line-height: 26px;
+  font-weight: bold;
+  margin: 0;
+  width: 470px;
+  min-height: 80px;
+  margin-bottom: 16px;
 }
 .reason-text {
   color: var(--basic-black-light);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 51px;
 }
+
 .description {
   background-color: var(--basic-blue);
   color: var(--basic-white);
+  display: flex;
+  
 }
 .description-text {
   text-align: center;
-  
+  padding: 47px 51px 54px 52px;
 }
+
 .description-text h2{
   font-size: 21px;
   line-height: 21px;
@@ -109,18 +165,38 @@ img {
 }
 .description-photo {
   background-color: var(--basic-blue);
+  width: 800px;
+  height: 256px;
 }
 .features {
   text-align: center;
 }
+.features-top {
+  padding: 55px 65px 81px 73px;
+}
 .features-list {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.features-top-list li { 
+  width: 300px;
+}
+.features-bottom {
+  padding: 47px 77px 54px 96px;
+}
+.features-bottom-list li {
+  width: 270px;
 }
 .features h3{
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
+  
 }
 .features p {
   font-weight: normal;
@@ -130,15 +206,30 @@ img {
 .features-bottom {
   background-color: var(--basic-grey-dark);
 }
-.date {
-  text-align: center;
-  
+.reservation {
+  display: flex;
+  justify-content: center;
+  padding: 58px 0 78px 0;
 }
-.date-header {
+.reservation-wrapper {
+  text-align: center;
+  width: 435px;
+}
+.reservation-header {
   font-size: 30px;
   line-height: 24px;
+  margin: 0;
 }
-
+.reservation-text {
+  font-size: 14px;
+  line-height: 21px;
+}
+.main-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--basic-transparency);
+}
 .main-footer-contact {
   font-size: 21px;
   line-height: 26px;
@@ -147,20 +238,44 @@ img {
 .main-footer-contact a{
   color: var(--basic-black);
 }
+.main-footer-contact p {
+  margin: 0;
+}
 .main-footer-text {
+  display: flex;
+  align-items: center;
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
 }
-.social {
-  background-color: var(--basic-transparency);
+.main-footer-text-website {
+  margin-right: 6px;
 }
-.social-list {
-  list-style: none;
+.main-footer-box {
+  width: 300px;
   text-align: center;
-  
 }
 
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.social-list-color {
+  width: 46px;
+  height: 48px;
+  background-color: var(--basic-blue);
+  display: flex;
+  margin-right: 6px;
+}
+.social-list li:nth-child(3) {
+  margin-right: 0;
+}
+.social-list-icon {
+  margin: auto;
+  
+}
 /*Страница каталога!!!*/
 
 /*Форма*/
@@ -192,6 +307,10 @@ img {
   font-weight: bold;
   color: var(--basic-white);
   border: none;
+}
+.housing-size {
+  width: 135px;
+  height: 90px;
 }
 .housing-more {
   background-color: var(--basic-blue);
