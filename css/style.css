@@ -54,16 +54,19 @@
   --basic-brown-hover: #604E43;
   --basic-brown-active: #503E33;
 
-  --basic-transparency-active:rgba(255, 255, 255, 0.3);
-  --basic-transparency-active: rgba(0, 0, 0, 0.3);
+  --basic-transparency-active-white:rgba(255, 255, 255, 0.3);
+  --basic-transparency-active-black: rgba(0, 0, 0, 0.3);
 }
-
+html {
+  height: 100%;
+}
 body {
   font-family: "PT Sans", Arial, sans-serif;
   background-color: var(--basic-grey-white);
   margin: 0;
   padding: 0;
   text-transform: uppercase;
+  height: 100%;
 }
 
 .container {
@@ -81,48 +84,72 @@ a {
   position: relative;
 }
 .site-navigation {
-  display: flex;
-  justify-content: space-around;
+  /*display: flex;
+  justify-content: space-around;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-size: 14px;
+  line-height: 26px;
   list-style: none;
   padding: 15px 0;
   margin: 0;
-  font-size: 14px;
-  line-height: 26px;
 }
+.site-navigation .site-navigation-start {
+  justify-self: start;
+}
+.site-navigation .site-navigation-end {
+  justify-self: end;
+}
+.site-navigation-info {
+  padding-left: 72px;
+}
+.site-navigation-hotels {
+  padding-right: 72px;
+}
+
 .main-header-logo {
   position: absolute;
   z-index: 1;
-  margin: 0 531px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 0;
   width: 138px;
-  height: 70px;
+  min-height: 70px;
 }
 .site-navigation a{
   color: var(--basic-black);
 }
 
-.welkome {
+.sedona {
   position: relative;
   background-color: var(--basic-black);
   background-repeat: no-repeat;
-  margin-bottom: 38px;
+  margin-bottom: 42px;
   background-image: url(../img/background-photo.jpg);
   background-position: center;
   background-repeat: no-repeat;
   width: 1200px;
-  height: 509px;
+  min-height: 509px;
 }
-.welkome-text {
+.sedona-text {
   position: absolute;
   left: 371px;
   top: 76px;
-
+}
+.sedona::before {
+  content: "";
+  background-image: url(../img/background-photo-bottom.png);
+  position: absolute;
+  width: 1200px;
+  min-height: 57px;
+  top: 452px;
 }
 .reason {
-  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .reason-header {
@@ -130,9 +157,9 @@ a {
   line-height: 26px;
   font-weight: bold;
   margin: 0;
-  width: 470px;
   min-height: 80px;
   margin-bottom: 16px;
+  width: 470px;
 }
 .reason-text {
   color: var(--basic-black-light);
@@ -148,11 +175,10 @@ a {
   background-color: var(--basic-blue);
   color: var(--basic-white);
   display: flex;
-  
 }
 .description-text {
   text-align: center;
-  padding: 47px 51px 54px 52px;
+  padding: 47px 51px 54px 52px; 
 }
 
 .description-text h2{
@@ -166,50 +192,122 @@ a {
 .description-photo {
   background-color: var(--basic-blue);
   width: 800px;
-  height: 256px;
-}
-.features {
-  text-align: center;
-}
-.features-top {
-  padding: 55px 65px 81px 73px;
-}
-.features-list {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
+  height: 256px; 
 }
 
-.features-top-list li { 
-  width: 300px;
-}
-.features-bottom {
-  padding: 47px 77px 54px 96px;
-}
-.features-bottom-list li {
-  width: 270px;
-}
+.features {
+  text-align: center;
+} 
 .features h3{
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
-  
 }
 .features p {
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
 }
+
+.features-top {
+  padding: 160px 49px 84px 50px;
+}
+.features-top-list {
+  list-style: none;
+  display: flex; 
+  justify-content: space-between; 
+  margin: 0;
+  padding: 0;
+}
+.features-top-list li { 
+  width: 300px;
+}
+.features-text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+}
+.features-text-description {
+  padding: 0;
+  margin: 0;
+}
+.features-icon-house {
+  position: relative;
+}
+.features-icon-house::before {
+  content: "";
+  position: absolute;
+  bottom: 48px;
+  left: 112px;
+  background-image: url(../img/icons/house-icon.svg);
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 72px;
+  margin: auto;
+}
+.features-icon-meal {
+  position: relative;
+}
+.features-icon-meal::before {
+  content: "";
+  position: absolute;
+  bottom: 49px;
+  right: 113px;
+  background-image: url(../img/icons/burger-icon.svg);
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 70px;
+  margin: auto;
+}
+.features-icon-surprise {
+  position: relative;
+}
+.features-icon-surprise::before {
+  content: "";
+  position: absolute;
+  bottom: 49px;
+  left: 117px;
+  background-image: url(../img/icons/surprise-icon.svg);
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 77px;
+  margin: auto;
+}
+
+
+.features-bottom {
+  padding: 51px 33px 30px 65px; 
+  
+}
+.features-bottom-list {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: flex-start; /*для переполнения*/
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.features-bottom-list li {
+  width: 270px;
+  /* outline: 2px solid yellow; */
+  margin-right: 130px;
+  margin-bottom: 20px;
+}
+.features-bottom-list li:nth-child(3n) {
+  margin-right: 0;
+}
 .features-bottom {
   background-color: var(--basic-grey-dark);
 }
+
+
 .reservation {
   display: flex;
   justify-content: center;
-  padding: 58px 0 78px 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 58px 0 0 0;
 }
 .reservation-wrapper {
   text-align: center;
@@ -219,21 +317,51 @@ a {
   font-size: 30px;
   line-height: 24px;
   margin: 0;
+  margin-bottom: 33px;
 }
 .reservation-text {
   font-size: 14px;
   line-height: 21px;
+  margin-bottom: 49px;
 }
-.main-footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: var(--basic-transparency);
-}
-.main-footer-contact {
+.reservation-button {
+  font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  width: 568px;
+  min-height: 86px;
+  background-color: var(--basic-brown);
+  border: none;
+  cursor: pointer;
+}
+.reservation-button:hover {
+  background-color: var(--basic-brown-hover);
+}
+.reservation-button:active {
+  background-color: var(--basic-brown-active);
+  color: var(--basic-transparency-active-white);
+}
+
+.main-footer {
+  /* display: flex;
+  justify-content: space-around;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  background-color: var(--basic-transparency);
+  min-height: 120px;
+}
+
+.main-footer-contact {
+  font-size: 21px;
+  line-height: 35px;
   font-weight: bold;
+  padding-left: 73px;
+  padding-bottom: 23px;
+  
 }
 .main-footer-contact a{
   color: var(--basic-black);
@@ -243,17 +371,21 @@ a {
 }
 .main-footer-text {
   display: flex;
-  align-items: center;
+  align-items: center; 
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
+  padding-left: 66px;
+  padding-bottom: 6px;
 }
+
 .main-footer-text-website {
   margin-right: 6px;
 }
 .main-footer-box {
-  width: 300px;
+   /* width: 300px;  */
   text-align: center;
+  
 }
 
 .social-list {
@@ -262,11 +394,13 @@ a {
   justify-content: center;
   padding: 0;
 }
+
 .social-list-color {
+  display: grid;
   width: 46px;
-  height: 48px;
+  min-height: 48px;
   background-color: var(--basic-blue);
-  display: flex;
+  /* display: flex; */
   margin-right: 6px;
 }
 .social-list li:nth-child(3) {
@@ -274,8 +408,9 @@ a {
 }
 .social-list-icon {
   margin: auto;
-  
 }
+
+
 /*Страница каталога!!!*/
 
 /*Форма*/
@@ -292,7 +427,7 @@ a {
   color: var(--basic-blue);
 }
 .housing-hotels:active {
-  color: var(--basic-transparency-active);
+  color: var(--basic-transparency-active-black);
 }
 
 .housing-price {
@@ -310,7 +445,7 @@ a {
 }
 .housing-size {
   width: 135px;
-  height: 90px;
+  min-height: 90px;
 }
 .housing-more {
   background-color: var(--basic-blue);
@@ -320,7 +455,7 @@ a {
 }
 .housing-more:active {
   background-color: var(--basic-blue-active);
-  color: var(--basic-transparency-active);
+  color: var(--basic-transparency-active-white);
 }
 .housing-reservation {
   background-color: var(--basic-brown);
@@ -330,7 +465,7 @@ a {
 }
 .housing-reservation:active {
   background-color: var(--basic-brown-active);
-  color: var(--basic-transparency-active);
+  color: var(--basic-transparency-active-white);
 }
 .housing {
   list-style: none;

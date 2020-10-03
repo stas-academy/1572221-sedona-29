@@ -16,18 +16,19 @@
       <img src="img/icons/logo-sedona-header.svg" alt="logo-sedona" width="138" height="70">
     </a>
     <ul class="site-navigation">
-      <li class="site-navigation-info"><a href="#">Информация</a></li>
-      <li class="site-navigation-photo"><a href="#">Фото и видео</a></li>
-      <li class="site-navigation-map"><a href="#">Карта штата </a></li>
-      <li class="site-navigation-hotels"><a href="hotels.html">Гостиницы</a></li>
+      <li class="site-navigation-info site-navigation-start"><a href="#">Информация</a></li>
+      <li class="site-navigation-photo site-navigation-start"><a href="#">Фото и видео</a></li>
+      <li class="site-navigation-map site-navigation-end"><a href="#">Карта штата </a></li>
+      <li class="site-navigation-hotels site-navigation-end"><a href="hotels.html">Гостиницы</a></li>
     </ul>
   </nav>
 </header>
 
 <main class="content">
-  <section class="welkome">
-    <!--<img class="welkome-image" src="img/background-photo.jpg" alt="photo-sedona-welkome" width="1200" height="509">-->
-    <img class="welkome-text" src="img/icons/welcome-sedona.svg" alt="welcome-sedona">
+
+  <section class="sedona">
+    <!--<img class="sedona-image" src="img/background-photo.jpg" alt="photo-sedona-welkome" width="1200" height="509">-->
+    <img class="sedona-text" src="img/icons/welcome-sedona.svg" alt="sedona">
   </section>
 
   <section class="reason">
@@ -48,20 +49,20 @@
 
   <section class="features features-top">
     <ul class="features-list features-top-list">
-      <li>
-        <img src="img/icons/house-icon.svg" alt="icon-house">
-        <h3>Жилье</h3>
-        <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+      <li class="features-item features-house">
+        <!-- <img src="img/icons/house-icon.svg" alt="icon-house"> -->
+        <h3 class="features-text features-icon-house">Жильё</h3>
+        <p class="features-text-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
       </li>
-      <li>
-        <img src="img/icons/burger-icon.svg" alt="icon-meal">
-        <h3>Еда</h3>
-        <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+      <li class="features-item features-meal">
+        <!-- <img src="img/icons/burger-icon.svg" alt="icon-meal"> -->
+        <h3 class="features-text features-icon-meal">Еда</h3>
+        <p class="features-text-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
       </li>
-      <li>
-        <img src="img/icons/surprise-icon.svg" alt="icon-souvenirs">
-        <h3>Сувениры</h3>
-        <p>Не только китайского, но и местного производства!</p>
+      <li class="features-item features-surprise">
+        <!-- <img src="img/icons/surprise-icon.svg" alt="icon-souvenirs"> -->
+        <h3 class=" features-text features-icon-surprise">Сувениры</h3>
+        <p class="features-text-description">Не только китайского, но и местного производства!</p>
       </li>
     </ul>
   </section>
@@ -95,30 +96,33 @@
         <p>— №5 —</p>
         <p>большинство едет в гранд каньон и толпится там</p>
       </li>
+      
     </ul>
   </section>
 
   <section class="reservation">
     <div class="reservation-wrapper">
       <h2 class="reservation-header">Заинтересовались?</h2>
-      <p class="reservation-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+      <p class="reservation-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне </p>
     </div>  
+    <button class="reservation-button" type="button">Поиск гостиницы в седоне</button>
   </section>
-  <!--Здесь будет карта-->
-
-</main>
-
+  <section class="map">
+    <img src="img/map.png" alt="Карта" width="1199" height="594">
+  </section>
+ </main>
+  
 <footer class="page-footer main-footer">
   <div class="main-footer-contact main-footer-box">
     <p>#visitSEDONA</p>
     <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
   </div>
-
+  
   <div class="social main-footer-box">
     <ul class="social-list">
-      <li class="social-list-color"><a class="social-list-icon" href=""> <img src="img/icons/twitter-icon.svg" alt=""></a></li>
-      <li class="social-list-color"><a class="social-list-icon" href=""><img src="img/icons/facebook-icon.svg" alt=""></a></li>
-      <li class="social-list-color"><a class="social-list-icon" href=""><img src="img/icons/youtube-icon.svg" alt=""></a></li>
+    <li class="social-list-color"><a class="social-list-icon" href=""> <img src="img/icons/twitter-icon.svg" alt=""></a></li>
+    <li class="social-list-color"><a class="social-list-icon" href=""><img src="img/icons/facebook-icon.svg" alt=""></a></li>
+    <li class="social-list-color"><a class="social-list-icon" href=""><img src="img/icons/youtube-icon.svg" alt=""></a></li>
     </ul>
   </div>
 
@@ -129,6 +133,7 @@
     </a>  
   </div>
 </footer>
+
 
 <!--здесь будет форма<section>
   <form action="">
