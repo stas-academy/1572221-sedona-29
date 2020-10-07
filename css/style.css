@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: 'PT Sans';
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   src: local('PT Sans Bold'), local('PTSans-Bold'),
        url('../fonts/ptsansbold.woff2') format('woff2'),
@@ -48,7 +48,7 @@
   --basic-grey-rating: #666666;
   --basic-grey-white: #F2F2F2;
   --basic-transparency:rgba(255, 255, 255, 0.9);
-
+  --basic-grey-bottom: #E5E5E5;
   --basic-blue-hover: #669EC0;
   --basic-blue-active: #5496BD;
   --basic-brown-hover: #604E43;
@@ -66,7 +66,7 @@ body {
   margin: 0;
   padding: 0;
   text-transform: uppercase;
-  height: 100%;
+  min-height: 100%;
 }
 
 .container {
@@ -123,7 +123,6 @@ a {
 .sedona {
   position: relative;
   background-color: var(--basic-black);
-  background-repeat: no-repeat;
   margin-bottom: 42px;
   background-image: url(../img/background-photo.jpg);
   background-position: center;
@@ -203,14 +202,16 @@ a {
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
+  
 }
 .features p {
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
+  color: var(--basic-black-light);
 }
 
-.features-top {
+/* .features-top {
   padding: 160px 49px 84px 50px;
 }
 .features-top-list {
@@ -273,24 +274,94 @@ a {
   width: 64px;
   height: 77px;
   margin: auto;
+} */
+.features-top {
+  padding: 160px 50px 82px 50px;
+}
+.features-top-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 100px;
+  row-gap: 120px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* outline: 2px solid rgb(247, 0, 0);
+  outline-offset: -2px; */
+}
+.features-item {
+  /* outline: 2px solid rgb(0, 255, 21);
+  outline-offset: -2px; */
+  margin: 0;
+  padding: 0;
+}
+.features-item h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 26px;
+}
+.features-item p {
+  margin: 0;
+  padding: 0;
 }
 
+.features-icon-house {
+  position: relative;
+}
+.features-icon-house::before {
+  content: "";
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../img/icons/house-icon.svg);
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 72px;
+}
+.features-icon-meal {
+  position: relative;
+}
+.features-icon-meal::before {
+  content: "";
+  position: absolute;
+  bottom: 49px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../img/icons/burger-icon.svg);
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 70px;
+}
+.features-icon-surprise {
+  position: relative;
+}
+.features-icon-surprise::before {
+  content: "";
+  position: absolute;
+  bottom: 49px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../img/icons/surprise-icon.svg);
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 77px;
+} 
 
-.features-bottom {
+/* .features-bottom {
   padding: 51px 33px 30px 65px; 
   
 }
 .features-bottom-list {
   display: flex; 
   flex-wrap: wrap;
-  justify-content: flex-start; /*для переполнения*/
+  justify-content: flex-start;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .features-bottom-list li {
   width: 270px;
-  /* outline: 2px solid yellow; */
   margin-right: 130px;
   margin-bottom: 20px;
 }
@@ -299,7 +370,43 @@ a {
 }
 .features-bottom {
   background-color: var(--basic-grey-dark);
+} */
+.features-bottom {
+  padding: 47px 63px 54px 63px;
 }
+.features-bottom-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 126px;
+  row-gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* outline: 2px solid rgb(247, 0, 0);
+  outline-offset: -2px; */
+
+}
+.features-bottom-item {
+  /* outline: 2px solid rgb(0, 255, 21);
+  outline-offset: -2px; */
+}
+.features-bottom-item-header {
+  margin: auto;
+  padding: 0;
+  margin-bottom: 25px;
+  width: 155px;
+}
+.features-bottom-content {
+  margin: 0;
+  padding: 0;
+}
+.features-bottom-number {
+  margin-bottom: 23px;
+}
+
+
+
+
 
 
 .reservation {
@@ -307,7 +414,7 @@ a {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 58px 0 0 0;
+  padding: 60px 0 0 0;
 }
 .reservation-wrapper {
   text-align: center;
@@ -403,9 +510,9 @@ a {
   /* display: flex; */
   margin-right: 6px;
 }
-.social-list li:nth-child(3) {
+/* .social-list li:nth-child(3) {
   margin-right: 0;
-}
+} */
 .social-list-icon {
   margin: auto;
 }
@@ -413,15 +520,138 @@ a {
 
 /*Страница каталога!!!*/
 
-/*Форма*/
-/*Сортировка*/
-/*Типы жилья*/
 
+/*Форма*/
+.image-filter {
+  background-color: var(--basic-black);
+  background-image: url(../img/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 217px;
+}
+
+/*Сортировка*/
+
+.search {
+  display: flex;
+  align-items: center;
+  /* outline: 2px solid rgb(0, 255, 21);
+  outline-offset: -2px; */
+  border-bottom: 1px solid var(--basic-grey-bottom);
+  padding: 29px 65px 31px 73px;
+}
+.search-header {
+  margin: 0;
+  padding: 0;
+  margin-right: 46px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px; 
+  color: var(--basic-black);
+}
+.search-header-min {
+  margin: 0;
+  padding: 0;
+  margin-right: 40px;
+  /* margin-bottom: 5px; */
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+}
+.search-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 777px;
+}
+.search-sort {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  /* outline: 2px solid rgb(250, 0, 0);
+  outline-offset: -2px; */
+  list-style: none;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  
+}
+.search-link {
+  margin-right: 34px;
+  color: var(--basic-transparency-active-black);
+  border-bottom: 1px dashed var(--basic-blue);
+}
+
+.search-link-active {
+  color: var(--basic-blue);
+  border-bottom: none;
+}
+.search-svg-arrow {
+  margin-left: 12px;
+  cursor: pointer;
+}
+.search-link:hover,
+.search-link:focus {
+  color: var(--basic-blue);
+}
+.search-link:active {
+  color: var(--basic-black);
+  border-bottom: none;
+}
+.search-sort li {
+  /* outline: 2px solid rgb(255, 251, 0);
+  outline-offset: -2px; */
+}
+
+.arrow-top:hover path,
+.arrow-top:focus path {
+  fill: var(--basic-black);
+}
+.arrow-top:active path,
+.arrow-top:focus path {
+  fill: var(--basic-blue);
+}
+.arrow-bottom:hover path,
+.arrow-bottom:focus path {
+  fill: var(--basic-black);
+}
+.arrow-bottom:active path,
+.arrow-bottom:focus path {
+  fill: var(--basic-blue);
+}
+
+
+/*Типы жилья*/
+.housing {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.housing-list {
+  padding: 23px 73px 26px 73px;
+  border-bottom: 1px solid var(--basic-grey-bottom);
+}
+
+.housing-items {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+.housing-img {
+  margin-right: 29px;
+}
 .housing-hotels {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-black);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 7px;
 }
 .housing-hotels:hover {
   color: var(--basic-blue);
@@ -429,26 +659,76 @@ a {
 .housing-hotels:active {
   color: var(--basic-transparency-active-black);
 }
-
-.housing-price {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 21px;
-  color: var(--basic-black-light);
+.housing-content {
+  width: 781px;
+  min-height: 100px;
+}
+.housing-welkome {
+  display: flex;
+}  
+.housing-welkome-block {
+  margin-right: 6px;
 }
 .housing-button {
   font-size: 14px;
   line-height: 21px;
   font-weight: bold;
   color: var(--basic-white);
+  text-transform: uppercase;
   border: none;
+  cursor: pointer;
+}
+.housing-button:active,
+.housing-button:focus {
+  outline: none;
+}
+.housing-more {
+  width: 110px;
+  height: 27px;
+  background-color: var(--basic-blue);
+}
+.housing-reservation {
+  width: 142px;
+  height: 27px;
+  background-color: var(--basic-brown);
+}
+.housing-text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-black-light);
 }
 .housing-size {
   width: 135px;
   min-height: 90px;
+  margin-top: 8px;
 }
-.housing-more {
-  background-color: var(--basic-blue);
+.housing-result {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 110px;
+  min-height: 97px;
+}
+.housing-stars {
+  margin-top: 5px;
+}
+.housing-rating {
+  width: 110px;
+  min-height: 27px;
+  background-color: var( --basic-grey-white);
+  text-align: center;
+  margin-top: auto;
+}
+
+.housing-rating-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: var( --basic-grey-rating);
 }
 .housing-more:hover {
   background-color: var(--basic-blue-hover);
@@ -457,16 +737,10 @@ a {
   background-color: var(--basic-blue-active);
   color: var(--basic-transparency-active-white);
 }
-.housing-reservation {
-  background-color: var(--basic-brown);
-}
 .housing-reservation:hover {
   background-color: var(--basic-brown-hover);
 }
 .housing-reservation:active {
   background-color: var(--basic-brown-active);
   color: var(--basic-transparency-active-white);
-}
-.housing {
-  list-style: none;
 }

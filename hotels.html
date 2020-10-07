@@ -24,84 +24,176 @@
   </nav>
 </header>
 
-<main class="wrapper">
-  <section>
+<main class="content">
+  
+  <section class="image-filter">
+    <!-- <img src="img/background.jpg" alt=""> -->
       <!--Здесь будет фильтр-->
   </section>
-  <section>
-    <img src="img/background.jpg" alt="">
+
+
+  <section class="search">
     <!--Сортировка-->
-    <h2>Тип жилья</h2>
+    <h2 class="search-header">Найдено: 3</h2>
+    <h3 class="search-header-min">Сортировка:</h3>
+    <div class="search-wrapper">
+    <ul class="search-sort search-sort-link">
+      <li class="search-item">
+        <a class=" search-link search-link-active" href="#">По цене</a>
+      </li>
+      <li class="search-item">
+        <a class="search-link"  href="#">По типу</a>
+      </li>
+      <li class="search-item">
+        <a class="search-link" href="#">По рейтингу</a>
+      </li>
+    </ul>
+    <ul class="search-sort search-sort-arrow">
+      <li class="search-link-arrow">
+        <a class="search-svg-arrow href="#">
+          <svg class="arrow-top" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+          </svg>
+        </a>
+      </li>
+      <li class="search-link-arrow">
+        <a class="search-svg-arrow href="#">
+          <svg class="arrow-bottom" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    </div>
+  </section>
+
+
+  <section>
     <ul class="housing">
-      <li>
-        <div>
-          <a href="#">
-            <img class="housing-size" src="img/hotel-photo.jpg" alt="amara resort">
-          </a>    
-        </div>
-        <div>
-          <a href="#">
-            <h3 class="housing-hotels">Amara Resort & Spa</h3>
-          </a>
-          <div class="housing-price">
-            <p>Гостиница</p>
-            <p>От 4000 р.</p>
-          </div>
-          <button class="housing-button housing-more" type="button">Подробнее</button>
-          <button class="housing-button housing-reservation" type="button">Забронировать</button>
-        </div>
-        <div>
-          <img src="img/icons/star-icon.svg" alt="">
-            <!--Здесь будет рейтинг-->
-        </div>
+      <li class="housing-list">
+        <ul class="housing-items">
+          <li class="housing-item housing-img">
+            <a href="#">
+              <img class="housing-size" src="img/hotel-photo.jpg" alt="amara resort" width="135px" height="90px">
+            </a>    
+          </li>
+          <li class="housing-item housing-content">
+            <a href="#">
+              <h3 class="housing-hotels">Amara Resort & Spa</h3>
+            </a>
+            <div class="housing-welkome">
+              <div class="housing-welkome-block">
+                <p class="housing-text">Гостиница</p>
+                <button class="housing-button housing-more" type="button">Подробнее</button>
+              </div>  
+              <div class="housing-welkome-block">
+                <p class="housing-text">От 4000 р.</p>
+                <button class="housing-button housing-reservation" type="button">Забронировать</button>
+              </div>
+            </div>
+          </li>
+          <li class="housing-item housing-result">
+            <div class="housing-stars">
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+              </svg>
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+              </svg>
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+              </svg>
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+              </svg>
+            </div>
+            <div class="housing-rating">
+              <span class="housing-rating-text">Рейтинг: 8,5</span>
+            </div>
+          </li>
+        </ul> 
       </li>
-      <li>
-        <div>
-          <a href="#">
-            <img class="housing-size" src="img/motel-photo.jpg" alt="Desert Quail Inn">
-          </a>
-        </div>
-        <div>
-          <a href="#">
-            <h3 class="housing-hotels">Desert Quail Inn</h3>
-          </a>
-          <div class="housing-price">
-            <p>Мотель</p>
-            <p>От 3000 р.</p>
-          </div>
-          <button class="housing-button housing-more" type="button">Подробнее</button>
-          <button class="housing-button housing-reservation" type="button">Забронировать</button>
-        </div>
-        <div>
-          <img src="img/icons/star-icon.svg" alt="">
-          <!--Здесь будет рейтинг-->
-        </div>
+
+      <li class="housing-list">
+        <ul class="housing-items">
+          <li class="housing-item housing-img">
+            <a href="#">
+              <img class="housing-size" src="img/motel-photo.jpg" alt="amara resort" width="135px" height="90px">
+            </a>    
+          </li>
+          <li class="housing-item housing-content">
+            <a href="#">
+              <h3 class="housing-hotels">Desert Quail Inn</h3>
+            </a>
+            <div class="housing-welkome">
+              <div class="housing-welkome-block">
+                <p class="housing-text">Мотель</p>
+                <button class="housing-button housing-more" type="button">Подробнее</button>
+              </div>  
+              <div class="housing-welkome-block">
+                <p class="housing-text">От 3000 р.</p>
+                <button class="housing-button housing-reservation" type="button">Забронировать</button>
+              </div>
+            </div>
+          </li>
+          <li class="housing-item housing-result">
+            <div class="housing-stars">
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+              </svg>
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+              </svg>
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+              </svg>
+            </div>
+            <div class="housing-rating">
+              <span class="housing-rating-text">Рейтинг: 8,9</span>
+            </div>
+          </li>
+        </ul> 
       </li>
-      <li>
-        <div>
-          <a href="#">
-            <img class="housing-size" src="img/flat-photo.jpg" alt="Villas at Poco Diablo">
-          </a>
-        </div>
-        <div>
-          <a href="#">
-            <h3 class="housing-hotels">Villas at Poco Diablo</h3>
-          </a>
-          <div class="housing-price">
-            <p>Апартаменты</p>
-            <p>От 2000 р.</p>
-          </div>
-          <button class="housing-button housing-more" type="button">Подробнее</button>
-          <button class="housing-button housing-reservation" type="button">Забронировать</button>
-        </div>
-        <div>
-          <img src="img/icons/star-icon.svg" alt="">
-          <!--Здесь будет рейтинг-->
-        </div>
+
+      <li class="housing-list">
+        <ul class="housing-items">
+          <li class="housing-item housing-img">
+            <a href="#">
+              <img class="housing-size" src="img/flat-photo.jpg" alt="amara resort" width="135px" height="90px">
+            </a>    
+          </li>
+          <li class="housing-item housing-content">
+            <a href="#">
+              <h3 class="housing-hotels">Villas at Poco Diablo</h3>
+            </a>
+            <div class="housing-welkome">
+              <div class="housing-welkome-block">
+                <p class="housing-text">Апартаменты</p>
+                <button class="housing-button housing-more" type="button">Подробнее</button>
+              </div>  
+              <div class="housing-welkome-block">
+                <p class="housing-text">От 2000 р.</p>
+                <button class="housing-button housing-reservation" type="button">Забронировать</button>
+              </div>
+            </div>
+          </li>
+          <li class="housing-item housing-result">
+            <div class="housing-stars">
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+              </svg>
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+              </svg>
+            </div>
+            <div class="housing-rating">
+              <span class="housing-rating-text">Рейтинг: 9,2</span>
+            </div>
+          </li>
+        </ul> 
       </li>
     </ul>
   </section>
-    
 </main>
 <footer class="page-footer main-footer">
   <div class="main-footer-contact main-footer-box">
