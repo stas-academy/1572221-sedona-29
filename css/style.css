@@ -553,9 +553,11 @@ a {
   position: absolute;
   z-index: 1;
   left: 50%;
-  transform: translateX(-50%);
-  top: 292px;
+  /* transform: translateX(-50%); */
+  /* top: 292px; */
+  top: 100%;
   width: 568px;
+  margin-left: -284px;
   height: 395px;
   padding: 41px 55px 56px 56px;
   background-color: var(--basic-white);
