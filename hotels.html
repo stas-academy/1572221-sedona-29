@@ -18,7 +18,7 @@
       <li class="site-navigation-info site-navigation-start"><a href="#">Информация</a></li>
       <li class="site-navigation-photo site-navigation-start"><a href="#">Фото и видео</a></li>
       <li class="site-navigation-map site-navigation-end"><a href="#">Карта штата </a></li>
-      <li class="site-navigation-hotels site-navigation-end"><a href="hotels.html">Гостиницы</a></li>
+      <li class="site-navigation-hotels site-navigation-end site-on-page-hotels"><a href="hotels.html">Гостиницы</a></li>
     </ul>
   </nav>
 </header>
@@ -26,20 +26,21 @@
 <main class="content">
   
   <section class="filters">
+    <h2 class="visually-hidden">Фильтр жилья и Инфраструктуры</h2>
     <form class="filter" action="#" method="get">
       <fieldset class="filter-section">
         <legend class="filter-header">Инфраструктура:</legend>
         <ul class="filter-list">
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="" id="filter-swimming-pool" checked>
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="swimming-pool" id="filter-swimming-pool" checked>
             <label for="filter-swimming-pool">Бассейн</label>
           </li>
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="" id="filter-parking">
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filter-parking" id="filter-parking">
             <label for="filter-parking">Парковка</label>
           </li>
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="" id="filter-wi-fi">
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filter-wi-fi" id="filter-wi-fi">
             <label for="filter-wi-fi">WI-FI</label>
           </li>
         </ul>
@@ -48,15 +49,15 @@
         <legend class="filter-header">Тип жилья:</legend>
         <ul class="filter-list">
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="" id="filter-hotel" checked>
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filter-hotel" id="filter-hotel" checked>
             <label for="filter-hotel">Гостиница</label>
           </li>
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="" id="filter-motel" checked>
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filter-motel" id="filter-motel" checked>
             <label for="filter-motel">Мотель</label>
           </li>
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="" id="filter-apartments" checked>
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filter-apartments" id="filter-apartments" checked>
             <label for="filter-apartments">Апартаменты</label>
           </li>
         </ul>
@@ -76,7 +77,7 @@
           <div class="range-toggle range-toggle-min"></div>
           <div class="range-toggle range-toggle-max"></div>
         </div>
-        <button class="range-show" type="button" name="show">Показать</button>
+        <button class="range-show" type="button" name="show" formaction="https://echo.htmlacademy.ru/">Показать</button>
       </fieldset>
     </form>
   </section>
@@ -180,7 +181,7 @@
         <ul class="housing-items">
           <li class="housing-item housing-img">
             <a href="#">
-              <img class="housing-size" src="img/motel-photo.jpg" alt="amara resort" width="135" height="90">
+              <img class="housing-size" src="img/motel-photo.jpg" alt="Desert Quail Inn" width="135" height="90">
             </a>    
           </li>
           <li class="housing-item housing-content">
@@ -223,7 +224,7 @@
         <ul class="housing-items">
           <li class="housing-item housing-img">
             <a href="#">
-              <img class="housing-size" src="img/flat-photo.jpg" alt="amara resort" width="135" height="90">
+              <img class="housing-size" src="img/flat-photo.jpg" alt="Villas at Poco Diablo" width="135" height="90">
             </a>    
           </li>
           <li class="housing-item housing-content">
@@ -270,6 +271,7 @@
     <ul class="social-list">
     <li class="social-list-color">
       <a class="social-list-icon" href="">
+        <span class="visually-hidden">Твитер</span>
         <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 
               2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 
@@ -284,6 +286,7 @@
     </li>
     <li class="social-list-color">
       <a class="social-list-icon" href="">
+        <span class="visually-hidden">Фейсбук</span>
         <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
           </svg>
@@ -291,6 +294,7 @@
     </li>
     <li class="social-list-color">
       <a class="social-list-icon" href="">
+        <span class="visually-hidden">Ютуб</span>
         <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0
                 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>

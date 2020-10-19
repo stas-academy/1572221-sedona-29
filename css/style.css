@@ -144,7 +144,9 @@ a {
   color: var(--basic-black);
   opacity: 0.3;
 }
-
+.site-on-page-hotels a {
+  color: var(--basic-brown);
+}
 .sedona {
   position: relative;
   background-color: var(--basic-black);
@@ -155,12 +157,14 @@ a {
   width: 1200px;
   min-height: 509px;
 }
-/* .sedona-text {
-  position: absolute;
-  left: 371px;
-  top: 76px;
-} */
 .sedona-text {
+  position: absolute;
+  /* left: 371px; */
+  left: 50%;
+  transform: translateX(-50%);
+  top: 67px;
+} 
+/* .sedona-text {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -170,7 +174,7 @@ a {
   background-repeat: no-repeat;
   width: 456.65px;
   height: 350.88px;
-}
+} */
 .sedona::before {
   content: "";
   background-image: url(../img/background-photo-bottom.png);
@@ -541,7 +545,6 @@ a {
   color: var(--basic-transparency-active-white);
 }
 /*Форма*/
-
 .search-form {
   display: flex;
   flex-wrap: wrap;
@@ -562,6 +565,13 @@ a {
   line-height: 26px;
   box-shadow: 0px 7px 15px var(--basic-transparency-shadows-grey);
 }
+/* Анимация */
+
+.search-form-hide {
+  display: none;
+  
+}
+
 .search-text {
   width: 346px;
   height: 37px;
@@ -586,11 +596,13 @@ a {
   position: absolute;
   top: 62px;
   right: 64px;
+  cursor: pointer;
 }
 .search-calendar-out {
   position: absolute;
   top: 129px;
   right: 64px;
+  cursor: pointer;
 }
 .search-calendar:hover path,
 .search-calendar:focus path {
@@ -604,7 +616,7 @@ a {
   align-items: center;
   min-height: 40px;
   width: 457px;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 .quantity-button {
   /* position: relative; */
@@ -617,6 +629,7 @@ a {
   border: none;
   padding: 0;
   margin: 0;
+  cursor: pointer;
 }
 .quantity-text:hover {
   background-color: var(--basic-grey-hard);
@@ -669,7 +682,7 @@ a {
 } */
 .hotels-footer {
   position: static;
-  padding-top: 4px;
+  /* padding-top: 4px; */
 }
 .main-footer-box {
   text-align: center;
@@ -679,7 +692,7 @@ a {
   line-height: 35px;
   font-weight: bold;
   padding-left: 73px;
-  padding-bottom: 23px;
+  padding-bottom: 17px;
   
 }
 .main-footer-contact a{
@@ -696,7 +709,7 @@ a {
   font-size: 14px;
   line-height: 26px;
   padding-left: 65px;
-  padding-top: 3px;
+  padding-top: 8px;
 } 
 .main-footer-icon {
   display: flex;
@@ -736,6 +749,7 @@ a {
   padding: 0;
   margin: 0;
   list-style: none;
+  padding-left: 4px;
 }
 
 .social-list-icon {
@@ -944,6 +958,13 @@ a {
   border: none;
   background-color: transparent;
 }
+.price-controls input[type='number'] {
+  -moz-appearance:textfield;
+}
+.price-controls input::-webkit-outer-spin-button,
+.price-controls input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 .min-price {
   margin-left: 64px;
 }
@@ -970,6 +991,7 @@ a {
   border: 8px solid var(--basic-white);
   border-radius: 50%;
   box-shadow: 0 2px 0px 0 var(--bacic-toggle-shadow);
+  cursor: pointer;
 }
 .range-toggle-max {
   left: 252px;
