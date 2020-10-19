@@ -553,8 +553,6 @@ a {
   position: absolute;
   z-index: 1;
   left: 50%;
-  /* transform: translateX(-50%); */
-  /* top: 292px; */
   top: 100%;
   width: 568px;
   margin-left: -284px;
@@ -571,7 +569,7 @@ a {
 /* Анимация */
 @keyframes bounce {
   0% {
-    transform: translateY(-568px);
+    transform: translateY(-86px);
   }
   100% {
     transform: translateY(0);
