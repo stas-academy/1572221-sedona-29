@@ -564,8 +564,17 @@ a {
   font-size: 14px;
   line-height: 26px;
   box-shadow: 0px 7px 15px var(--basic-transparency-shadows-grey);
+  animation: bounce 0.5s;
 }
 /* Анимация */
+@keyframes bounce {
+  0% {
+    transform: translateY(-568px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 .search-form-hide {
   display: none;
