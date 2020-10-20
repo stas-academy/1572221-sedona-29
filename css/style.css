@@ -475,6 +475,57 @@ a {
 .search-calendar:active path {
   fill: var(--basic-blue);
 }
+.search-form-submit {
+  width: 100%;
+  min-height: 58px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--basic-blue);
+  border: none;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  margin-top: auto;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+.search-form-submit:hover,
+.search-form-submit:focus {
+  background-color: var(--basic-blue-hover);
+}
+.search-form-submit:active {
+  background-color: var(--basic-blue-active);
+  color: var(--basic-transparency-active-white);
+}
+.search-form-submit {
+  width: 100%;
+  min-height: 58px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--basic-blue);
+  border: none;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  margin-top: auto;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 16px;
+}
+.search-form-submit:hover,
+.search-form-submit:focus {
+  background-color: var(--basic-blue-hover);
+}
+.search-form-submit:active {
+  background-color: var(--basic-blue-active);
+  color: var(--basic-transparency-active-white);
+}
+
 .quantity {
   display: flex;
   align-items: center;
@@ -628,28 +679,6 @@ a {
   margin: 0;
   padding: 0;
   text-align: center;
-}
-.search-form-submit {
-  width: 100%;
-  min-height: 58px;
-  margin: 0;
-  padding: 0;
-  background-color: var(--basic-blue);
-  border: none;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 26px;
-  color: var(--basic-white);
-  text-transform: uppercase;
-  margin-top: auto;
-}
-.search-form-submit:hover,
-.search-form-submit:focus {
-  background-color: var(--basic-blue-hover);
-}
-.search-form-submit:active {
-  background-color: var(--basic-blue-active);
-  color: var(--basic-transparency-active-white);
 }
 
 /*Страница каталога!!!*/
