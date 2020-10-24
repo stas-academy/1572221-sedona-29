@@ -1,19 +1,19 @@
 /* Fonts*/
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: local('PT Sans'), local('PTSans-Regular'),
-       url('../fonts/ptsans.woff2') format('woff2'), 
-       url('../fonts/ptsans.woff') format('woff');
+  src: local("PT Sans"), local("PTSans-Regular"),
+       url("../fonts/ptsans.woff2") format("woff2"), 
+       url("../fonts/ptsans.woff") format("woff");
 }
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: local('PT Sans Bold'), local('PTSans-Bold'),
-       url('../fonts/ptsansbold.woff2') format('woff2'),
-       url('../fonts/ptsansbold.woff') format('woff');
+  src: local("PT Sans Bold"), local("PTSans-Bold"),
+       url("../fonts/ptsansbold.woff2") format("woff2"),
+       url("../fonts/ptsansbold.woff") format("woff");
 }
 /*Variables*/
 :root {
@@ -36,6 +36,7 @@
   --basic-grey: #A9A9A9;
   --basic-grey-toggle: #ABABAB;
   --bacic-toggle-shadow: rgba(171, 171, 171, 0.3);
+  --basic-transparency-shadows-white: rgba(0, 1, 1, 0.2);
   --basic-transparency-shadows-grey: rgba(0, 1, 1, 0.15);
   --basic-transparency-active-white: rgba(255, 255, 255, 0.3);
   --basic-transparency-active-black: rgba(0, 0, 0, 0.3);
@@ -56,7 +57,7 @@ body {
   width: 1200px;
   margin: auto;
   background-color: var(--basic-white);
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0px 5px 15px var(--basic-transparency-shadows-white);
 }
 a {
   text-decoration: none;
@@ -225,7 +226,7 @@ a {
 .features {
   text-align: center;
 } 
-.features h3{
+.features h3 {
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
@@ -442,6 +443,15 @@ a {
   padding-left: 13px;
   box-sizing: border-box;
 }
+/* .search-form input[type="text"]::-webkit-input-placeholder {
+  color: var(--basic-black);
+}
+.search-form input[type="text"]::-moz-placeholder {
+  color: var(--basic-black);
+} */
+.search-form input[type="text"]::placeholder {
+  color: var(--basic-black);
+}
 .search-text:hover {
   background-color: var(--basic-grey-hard);
 }
@@ -656,13 +666,14 @@ a {
   background-image: url(../img/background.jpg);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   width: 1200px;
-  height: 217px;
+  min-height: 217px;
 }
 .filter {
   display: flex;
   flex-wrap: wrap;
-  padding: 27px 72px 30px 72px;
+  padding: 27px 72px 8px 72px;
 }
 .filter-header {
   font-weight: bold;
@@ -727,6 +738,9 @@ a {
   outline: 1px solid var(--basic-black);
   outline-style: auto;
 }
+.filter-input-checkbox:hover + label {
+  opacity: 0.6;
+}
 .filter-section-price {
   margin-left: auto; 
   display: flex;
@@ -761,7 +775,7 @@ a {
   border: none;
   background-color: transparent;
 }
-.price-controls input[type='number'] {
+.price-controls input[type="number"] {
   -moz-appearance:textfield;
 }
 .price-controls input::-webkit-outer-spin-button,
@@ -962,12 +976,12 @@ a {
 }
 .housing-more {
   width: 110px;
-  height: 27px;
+  min-height: 27px;
   background-color: var(--basic-blue);
 }
 .housing-reservation {
   width: 142px;
-  height: 27px;
+  min-height: 27px;
   background-color: var(--basic-brown);
 }
 .housing-size {
