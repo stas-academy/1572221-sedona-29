@@ -7,4 +7,3 @@ reservationButton.addEventListener("click", function (evt) {
   reservationPopup.classList.toggle("search-form-hide");
   checkIn.focus();
 });
-

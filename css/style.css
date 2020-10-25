@@ -51,6 +51,8 @@ body {
   padding: 0;
   text-transform: uppercase;
   min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 .container {
   position: relative;
@@ -569,6 +571,8 @@ a {
   position: absolute;
   bottom: 0;
   width: 100%;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 .hotels-footer {
   position: static;
