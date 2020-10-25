@@ -443,12 +443,6 @@ a {
   padding-left: 13px;
   box-sizing: border-box;
 }
-/* .search-form input[type="text"]::-webkit-input-placeholder {
-  color: var(--basic-black);
-}
-.search-form input[type="text"]::-moz-placeholder {
-  color: var(--basic-black);
-} */
 .search-form input[type="text"]::placeholder {
   color: var(--basic-black);
 }
@@ -470,6 +464,12 @@ a {
   top: 129px;
   right: 64px;
   cursor: pointer;
+}
+.search-calendar {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
 }
 .search-calendar:hover path,
 .search-calendar:focus path {
@@ -558,7 +558,7 @@ a {
 .map {
   background-image: url(../img/map.png);
   width: 1200px;
-  height: 590px;
+  height: 594px;
 }
 .main-footer {
   display: grid;

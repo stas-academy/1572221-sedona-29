@@ -29,15 +29,15 @@
         <legend class="filter-header">Инфраструктура:</legend>
         <ul class="filter-list">
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="swimming-pool" id="filter-swimming-pool" checked>
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="swimming-pool" id="filter-swimming-pool" disabled checked>
             <label for="filter-swimming-pool">Бассейн</label>
           </li>
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filter-parking" id="filter-parking">
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filter-parking" id="filter-parking" disabled>
             <label for="filter-parking">Парковка</label>
           </li>
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filter-wi-fi" id="filter-wi-fi">
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filter-wi-fi" id="filter-wi-fi" disabled>
             <label for="filter-wi-fi">WI-FI</label>
           </li>
         </ul>
@@ -46,15 +46,15 @@
         <legend class="filter-header">Тип жилья:</legend>
         <ul class="filter-list">
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filter-hotel" id="filter-hotel" checked>
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filter-hotel" id="filter-hotel" disabled checked>
             <label for="filter-hotel">Гостиница</label>
           </li>
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filter-motel" id="filter-motel" checked>
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filter-motel" id="filter-motel" disabled checked>
             <label for="filter-motel">Мотель</label>
           </li>
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filter-apartments" id="filter-apartments" checked>
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filter-apartments" id="filter-apartments" disabled checked>
             <label for="filter-apartments">Апартаменты</label>
           </li>
         </ul>
@@ -96,15 +96,14 @@
       </ul>
       <ul class="search-sort search-sort-arrow">
         <li class="search-link-arrow">
-          <a href="#" class="search-small-arrow">
+          <a href="#" class="search-small-arrow" aria-label="Стрелка вверх">
             <svg class="arrow-top" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
             </svg>
           </a>
         </li>
         <li class="search-link-arrow">
-          <a href="#" class="search-small-arrow">
-            <span class="visually-hidden">Стрелки сортировки</span>
+          <a href="#" class="search-small-arrow" aria-label="Стрелка вниз">
             <svg class="arrow-bottom" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
             </svg>
