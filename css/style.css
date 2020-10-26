@@ -27,7 +27,7 @@
   --basic-grey-hard: #EBEBEB;
   --basic-grey-rating: #666666;
   --basic-grey-white: #F2F2F2;
-  --basic-transparency:rgba(255, 255, 255, 0.9);
+  --basic-grey-block: #6A6A6A;
   --basic-grey-bottom: #E5E5E5;
   --basic-blue-hover: #669EC0;
   --basic-blue-active: #5496BD;
@@ -35,6 +35,7 @@
   --basic-brown-active: #503E33;
   --basic-grey: #A9A9A9;
   --basic-grey-toggle: #ABABAB;
+  --basic-transparency:rgba(255, 255, 255, 0.9);
   --bacic-toggle-shadow: rgba(171, 171, 171, 0.3);
   --basic-transparency-shadows-white: rgba(0, 1, 1, 0.2);
   --basic-transparency-shadows-grey: rgba(0, 1, 1, 0.15);
@@ -51,8 +52,6 @@ body {
   padding: 0;
   text-transform: uppercase;
   min-height: 100%;
-  /* display: grid;
-  grid-template-rows: 1fr auto; */
 }
 .container {
   position: relative;
@@ -118,7 +117,7 @@ a {
   width: 138px;
   min-height: 70px;
 }
-.site-navigation a{
+.site-navigation a {
   color: var(--basic-black);
 }
 .site-navigation a:hover,
@@ -436,6 +435,29 @@ a {
     transform: translateY(0);
   }
 }
+.modal-error {
+  animation: shake 0.7s;
+  box-shadow: 0px 10px 10px var(--basic-blue);
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
 .search-form-hide {
   display: none;
 }
@@ -452,6 +474,20 @@ a {
   box-sizing: border-box;
 }
 .search-form input[type="text"]::placeholder {
+  color: var(--basic-black);
+} 
+.search-form input[type="text"]::-webkit-input-placeholder {
+  color: var(--basic-black);
+  opacity: 1;
+}
+.search-form input[type="text"]::-moz-placeholder {
+  color: var(--basic-black);
+  opacity: 1;
+}
+.search-form input[type="text"]:-moz-placeholder {
+  color: var(--basic-black);
+}
+.search-form input[type="text"]:-ms-input-placeholder {
   color: var(--basic-black);
 }
 .search-text:hover {
@@ -507,6 +543,7 @@ a {
   color: var(--basic-white);
   text-transform: uppercase;
   margin-top: auto;
+  cursor: pointer;
 }
 .search-form-submit:hover,
 .search-form-submit:focus {
@@ -577,8 +614,6 @@ a {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* grid-row-start: 2;
-  grid-row-end: 3; */
   flex-shrink: 0;
 }
 .hotels-footer {
@@ -723,6 +758,13 @@ a {
   display: block;
   cursor: pointer;
 }
+.filter-input-checkbox[type="checkbox"]:disabled + label {
+  color: var(--basic-grey-block);
+}  
+.filter-input-checkbox[type="checkbox"]:disabled + label::before {
+  color: var(--basic-grey-block);
+  opacity: 0.5;
+}  
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
@@ -750,7 +792,7 @@ a {
   outline-style: auto;
 }
 .filter-input-checkbox:hover + label {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .filter-section-price {
   margin-left: auto; 
@@ -787,7 +829,7 @@ a {
   background-color: transparent;
 }
 .price-controls input[type="number"] {
-  -moz-appearance:textfield;
+  -moz-appearance: textfield;
 }
 .price-controls input::-webkit-outer-spin-button,
 .price-controls input::-webkit-inner-spin-button {
@@ -844,6 +886,7 @@ a {
   align-self: center;
   margin-top: 33px;
   margin-right: 11px;
+  cursor: pointer;
 }
 .range-show:hover,
 .range-show:focus {
