@@ -14,6 +14,8 @@ reservationButton.addEventListener("click", function (evt) {
 form.addEventListener("submit", function (evt) {
   if (!dateIn.value || !dateOut.value) {
     evt.preventDefault();
+    reservationPopup.classList.remove("modal-error");
+    reservationPopup.offsetWidth = reservationPopup.offsetWidth;
     reservationPopup.classList.add("modal-error");
   }
 });
